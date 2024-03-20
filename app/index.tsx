@@ -1,21 +1,37 @@
+import { Link, Stack } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
+import { UserTheme } from './theme';
+
+
 
 export default function Index() {
+
+    
+
   return (
-    <View style={styles.container}>
-      <Text>Welcome To Dealer's Choice Poker!</Text>
-      {/* <StatusBar style="auto" /> */}
-    </View>
+    
+
+        <View style={baseStyles.container}>
+            <Stack.Screen
+            options={{
+                headerShown: false
+            }}/>
+            <Text>Welcome To Dealer's Choice Poker!</Text>
+            <Link href={'/play/solo'}>Play against Computers</Link>
+            <Link href={'settings'}>Settings</Link>
+        </View>
+
+    
   );
 }
 
-const styles = StyleSheet.create({
+export const baseStyles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: UserTheme.colors.background,
     alignItems: 'center',
-    marginTop: 50,
+    marginTop: 100,
     // justifyContent: 'center',
   },
 });
