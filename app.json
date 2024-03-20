@@ -6,6 +6,9 @@
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
+
+    "scheme": "your-app-scheme",
+    
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
@@ -24,7 +27,17 @@
       }
     },
     "web": {
+      "bundler": "metro",
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "d5c650e3-cc2e-45a0-9bf3-13ebe13b8297"
+      }
+    },
+    "owner": "mikemac15",
+    "plugins": [
+      "expo-router"
+    ]
   }
 }
